@@ -1,0 +1,18 @@
+
+HotKeySet("!m", "getWindowTitle")
+HotKeySet("!t", "setWinTitle")
+
+While 1
+Sleep(1000)
+WEnd
+
+Func getWindowTitle()
+$wintitle = WinGetTitle("")
+MsgBox(0, "WinTitle", $wintitle)
+EndFunc
+
+Func setWinTitle()
+$input = InputBox("Window Name Change", "What do you want to change the name of the current window to?")
+$wincurtitle = WinGetTitle("")
+WinSetTitle($wincurtitle, "", $input)
+EndFunc
